@@ -6,22 +6,14 @@ namespace BowlingKata.Tests {
 		public void Setup() {
 		}
 
-		[Test]
-		public void ReturnScoreWithOutSpareAndStrike()
+		[TestCase("9- 9- 9- 9- 9- 9- 9- 9- 9- 9-", 90)]
+		public void ReturnScoreWithOutSpareAndStrike(string rolls, int score)
 		{
 			var bowlingGame = new BowlingGame();
 
-			var result = bowlingGame.Score("9- 9- 9- 9- 9- 9- 9- 9- 9- 9-");
+			var result = bowlingGame.Score(rolls);
 
-			result.Should().Be(90);
-		}
-	}
-
-	public class BowlingGame
-	{
-		public int Score(string rolls)
-		{
-			return 90;
+			result.Should().Be(score);
 		}
 	}
 }

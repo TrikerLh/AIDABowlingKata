@@ -9,8 +9,15 @@ public class BowlingGame
 		var totalScore = 0;
 		foreach (var score in scoreForRoll)
 		{
-			totalScore += Convert.ToInt32(score[0].ToString());
-			totalScore += Convert.ToInt32(score[1].ToString());
+			var firstAttempt = score[0].ToString();
+			if (firstAttempt != "-")
+			{
+				totalScore += Convert.ToInt32(score[0].ToString());
+			}
+			var secondAttempt = score[1].ToString();
+			if (secondAttempt != "-") {
+				totalScore += Convert.ToInt32(score[1].ToString());
+			}
 		}
 
 		return totalScore;

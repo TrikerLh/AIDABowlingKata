@@ -17,6 +17,16 @@ namespace BowlingKata.Tests {
 
 			result.Should().Be(score);
 		}
+
+
+		[Test]
+		public void ReturnScoreWithOutSpareAndStrikeWithFails() {
+			var bowlingGame = new BowlingGame();
+
+			var result = bowlingGame.Score("9- -9 -- 9- 9- 9- 9- 9- 9- 9-");
+
+			result.Should().Be(81);
+		}
 	}
 }
 

@@ -6,8 +6,8 @@ namespace BowlingKata.Tests {
 		public void Setup() {
 		}
 
-		[TestCase("9- 9- 9- 9- 9- 9- 9- 9- 9- 9-", 90)]
-		[TestCase("5- 5- 5- 5- 5- 5- 5- 5- 5- 5-", 50)]
+		[TestCase("81 81 81 81 81 81 81 81 81 81", 90)]
+		[TestCase("41 41 41 41 41 41 41 41 41 41", 50)]
 		public void ReturnScoreWithOutSpareAndStrike(string rolls, int score)
 		{
 			var bowlingGame = new BowlingGame();
